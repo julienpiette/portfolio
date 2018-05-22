@@ -59,6 +59,9 @@ $pinterest-dark: url(../img/pinterest-light.svg)no-repeat center center; */
 .lg-10 {
   width: 10%; }
 
+
+
+
 .hidden {
   display: none; }
 
@@ -93,6 +96,27 @@ $pinterest-dark: url(../img/pinterest-light.svg)no-repeat center center; */
   width: 100%;
   height: auto;
   z-index: -1; }
+
+
+@media screen and (max-width: 768px) 
+{
+  .lg-100,
+  .lg-90,
+  .lg-80,
+  .lg-70,
+  .lg-50,
+  .lg-40,
+  .lg-30
+  {
+    width: 100%; 
+  }
+
+  .text-inner--right
+  {
+    margin-right: 0;
+  }
+} 
+
 
 .citation {
   font-family: "playfair_displayitalic", Georgia, serif;
@@ -992,6 +1016,7 @@ h5 {
 
 /*social*/
 .social ul {
+  z-index: 1000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1094,14 +1119,31 @@ h5 {
   .wrapper-slide .img-slide {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 80%;
     max-width: 1210px;
     top: 50%;
     left: 50%;
     margin: 0 auto;
     background: #fff;
     -webkit-perspective-origin: center center;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1); }
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1); 
+  }
+
+  @media screen and (max-width: 768px) {
+    .wrapperFooter, .wrapperHeader
+    {
+      height: 60px;
+    }
+    .wrapper-slide .img-slide
+    {
+      width: auto;
+      height: calc(100% - 60px);
+    }
+  }
+    
+
+
+
   .wrapper-slide .t-container {
     position: absolute;
     top: 50%;
@@ -1110,10 +1152,10 @@ h5 {
     font-size: 18px;
     margin-top: -70px; }
     .wrapper-slide .t-container:hover .span {
-      color: #fff;
+      color: #2b6cc4;
       transform: translateX(0px); }
       .wrapper-slide .t-container:hover .span:before {
-        background-color: #fff;
+        background-color: #2b6cc4;
         transform: translateX(-20px);
         width: 60px; }
     .wrapper-slide .t-container h2 {
@@ -1143,6 +1185,51 @@ h5 {
         top: 50%;
         transition: all 1s ease; }
 
+  @media screen and (max-width: 768px) {
+    .wrapper-slide .t-container
+    {
+      display: block;
+      top: calc(100% + 40px);
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    .wrapper-slide .t-container h2
+    {
+      line-height: 60px;
+    }
+    .wrapper-slide .t-container h2 .span1
+    {
+      font-size: 40px;
+    }
+    .wrapper-slide .t-container h2 .span
+    {
+      font-size: 16px;
+    }
+    .wrapper-slide .t-container .span
+    {
+      padding-left: 0;
+      transform: translateX(0);
+    }
+    .wrapper-slide .t-container .span:before 
+    {
+      height: 40px;
+      width: 1px;
+      background-color: #0b0b0b;
+      top: inherit;
+      bottom: -60px;
+      left: 50%;
+      transition: all 1s ease;
+    }
+    .wrapper-slide .t-container:hover .span:before { 
+      transform: translateX(-30px);
+    }
+    .wrapperFooter
+    {
+      display: none;
+    }
+  }
+
 /* ========== SECTION  - content animation ========== */
 .img-slide {
   opacity: 0;
@@ -1162,6 +1249,7 @@ h5 {
 
 /* NAV RIGHT */
 #fp-nav.right {
+  display: none;
   right: 40px; }
 
 #Awrapper {
@@ -1171,6 +1259,40 @@ h5 {
   #Awrapper .line {
     background-color: #f5f5f5;
     opacity: 0.019; }
+
+ .menu-info {
+  overflow: hidden;
+  cursor: pointer; }
+ .menu-info a
+  {
+    transition: all .2s ease;
+    position: relative;
+  }
+ .menu-info a span{
+    position: absolute;
+    transform: translateY(-50%);
+    left: 100%;
+    top: 50%; 
+
+    }
+
+   .menu-info a:hover
+   {
+      text-indent: -60px;
+   } 
+
+/*  #home .menu-info:before {
+    width: 29px;
+    height: 9px;
+    transition: all .4s ease;
+    content: "me";
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); }
+  #home .menu-info:hover a {
+    transform: translateX(0); }
+  #home .menu-info:hover:before {
+    transform: translateX(-80px); }*/
 
 #about {
   color: #f5f5f5;
@@ -1506,7 +1628,7 @@ h5 {
     height: 368px;
     background: url(../img/isbeceren/etiquettes.png) no-repeat center center;
     left: 11vw;
-    top: 60px;
+    top: 0;
     z-index: -10; }
   #isbeceren .content-next .mockup {
     position: absolute;
@@ -1549,7 +1671,9 @@ h5 {
     bottom: 150px; }
 
 #bimtv .content-studies {
-  background: linear-gradient(135deg, #3fc0a7, #3fc0a7 40%, #8df3df); }
+  background: linear-gradient(135deg, #3fc0a7, #3fc0a7 40%, #8df3df); 
+  padding-bottom: 26vw;
+}
   #bimtv .content-studies:before {
     width: 800px;
     height: 780px;
@@ -1591,7 +1715,7 @@ h5 {
       top: 50%;
       transform: translateY(-20%);
       left: -120px;
-      z-index: 0; }
+      z-index: -1; }
 
 /* -------------------------------------------------------- LAST */
 #bimtv .content-last:before {
@@ -1648,5 +1772,200 @@ h5 {
     transform: translateY(-40%);
     left: -20vw;
     z-index: -1; }
+
+  @media screen and (max-width: 1024px) 
+  {
+    #isbeceren .content-studies .card
+    {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) 
+  {
+    #silva.case h2, #isbeceren.case h2, #bimtv.case h2
+    {
+      font-size: 60px;
+    }
+
+    .project-title h3, .title-legend
+    {
+      font-size: 30px;
+    }
+
+    .lead-intro .global
+    {
+      flex-direction: column-reverse;
+    }
+    .lead-intro .global .text-inner
+    {
+      padding-left: 0;
+    }
+    .lead-intro .global .lg-40
+    {
+      width: 100%;
+    }
+    .lead-intro .global .information-project
+    {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 0;
+    }
+    .lead-intro .global .information-project li
+    {
+      margin-right: 20px;
+    }
+
+    .text-inner
+    {
+      padding-left: 0;
+    }
+    .bot-shadow
+    {
+      display: none;
+    }
+
+    .content-intro
+    {
+      margin-top: 20px;
+    }
+
+    .content-intro .text-inner
+    {
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .main .container .global 
+    {
+      flex-direction: column-reverse;
+    }
+    .content-intro .screen
+    {
+      margin-top: 60px;
+    }
+
+    .section-title
+    {
+      max-width: 80%;
+    }
+
+    .content-studies .lg-50
+    {
+      width: 80%;
+    }
+
+    .content-studies .lg-30
+    {
+      width: 100%;
+    }
+
+    .content-studies .space-block.lg-40
+    {
+      width: 80%;
+    }
+
+
+    #isbeceren .content-intro .logo-project
+    {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    #isbeceren .content-intro .section-title
+    {
+      max-width: 100%;
+    }
+
+    #isbeceren .content-intro
+    {
+      padding-bottom: 180px;
+    }
+
+    #isbeceren .content-next .mockup
+    {
+      top: calc(100%);
+      right: 0;
+      text-align: right;
+    }
+
+    #isbeceren .content-studies {
+      padding: 26vw 0 60vw;
+    }
+
+    #isbeceren .content-next .mockup img
+    {
+      max-height: 540px;
+    }
+
+    #isbeceren .content-next:after
+    {
+      left: inherit;
+      right: 0;
+      background-size: 60%;
+      width: 150px;
+      height: 207px;
+    }
+
+
+    #bimtv .content-intro .space-block img.card
+    {
+      max-height: 340px;
+      width: auto;
+    }
+
+    #bimtv .content-studies 
+    {
+      padding-bottom: 300px;
+    }
+
+    #bimtv .content-studies .mockup
+    {
+      display: none;
+    }
+
+    #bimtv .content-next .global .mockup
+    {
+      left: 0;
+    }
+    #bimtv .content-next
+    { 
+      padding-top: 160px;
+      padding-bottom: 76vh;
+    }
+  }
+
+  @media screen and (max-width: 420px) 
+  {
+
+    .lead-intro .global .information-project
+    {
+      flex-direction: column;
+    }
+    .lead-intro .global .information-project li
+    {
+      margin-bottom: 20px;
+    }
+
+    #isbeceren .content-studies {
+      padding: 26vw 0 90vw;
+    }
+
+    #bimtv .content-studies 
+    {
+      padding-bottom: 360px;
+    }
+
+    #bimtv .content-last .space-block
+    {
+      padding: 10vw 0 4vw;
+    }
+
+    #bimtv .content-next 
+    {
+      padding-bottom: 46vh;
+    }
+  }
+
 
 /*# sourceMappingURL=style.css.map */
