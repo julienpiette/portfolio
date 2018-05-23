@@ -133,6 +133,8 @@ $(function(){
 
         if (windowsize < 768) {
             $(".section:first-child .img-slide").attr("src", "img/slide1-small.jpg");
+            $(".section:nth-child(2) .img-slide").attr("src", "img/slide2-small.jpg");
+            $(".section:nth-child(3) .img-slide").attr("src", "img/slide3-small.jpg");
             // $(".section:nth-child(2) .img-slide").attr("src", "img/slide2-2.jpg");
             // $(".section:nth-child(3) .img-slide").attr("src", "img/slide3-2.jpg");
             // $(".section:nth-child(4) .img-slide").attr("src", "img/slide4-2.jpg");
@@ -143,6 +145,8 @@ $(function(){
 
         else {
             $(".section:first-child .img-slide").attr("src", "img/slide1.jpg");
+            $(".section:nth-child(2) .img-slide").attr("src", "img/slide2.jpg");
+            $(".section:nth-child(3) .img-slide").attr("src", "img/slide3.jpg");
             // $(".section:nth-child(2) .img-slide").attr("src", "img/slide2.jpg");
             // $(".section:nth-child(3) .img-slide").attr("src", "img/slide3.jpg");
             // $(".section:nth-child(4) .img-slide").attr("src", "img/slide4.jpg");
