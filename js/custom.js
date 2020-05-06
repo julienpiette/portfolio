@@ -5,10 +5,10 @@ $(document).ready(function() {
         menu: false,
         menu: '#MyMenu',
         lockAnchors: true,
-        anchors:['Silva', 'Cirkel', 'LaRoche', 'Isbeceren', 'Lastrip'],
+        anchors:['Alfonse','Silva', 'Bim', 'Isbeceren'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Silva', 'Cirkel', 'La Roche', 'Isbeceren', 'Lastrip',],
+        navigationTooltips: ['Alfonse','Silva', 'Bim', 'Isbeceren'],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'bottom',
@@ -132,25 +132,27 @@ $(function(){
 
 
         if (windowsize < 768) {
-            $(".section:first-child .img-slide").attr("src", "img/slide1-small.jpg");
-            $(".section:nth-child(2) .img-slide").attr("src", "img/slide2-small.jpg");
-            $(".section:nth-child(3) .img-slide").attr("src", "img/slide3-small.jpg");
-            // $(".section:nth-child(2) .img-slide").attr("src", "img/slide2-2.jpg");
-            // $(".section:nth-child(3) .img-slide").attr("src", "img/slide3-2.jpg");
-            // $(".section:nth-child(4) .img-slide").attr("src", "img/slide4-2.jpg");
-            // $(".section:nth-child(5) .img-slide").attr("src", "img/slide5-2.jpg");
+            $(".section-1 .img-slide").attr("src", "img/slide-alfonse-small.jpg");
+            $(".section-2 .img-slide").attr("src", "img/slide1-small.jpg");
+            $(".section-3 .img-slide").attr("src", "img/slide2-small.jpg");
+            $(".section-4 .img-slide").attr("src", "img/slide3-small.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide2-2.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide3-2.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide4-2.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide5-2.jpg");
             // $(".section:last-child .img-slide").attr("src", "img/slide5-2.jpg");
         } 
 
 
         else {
-            $(".section:first-child .img-slide").attr("src", "img/slide1.jpg");
-            $(".section:nth-child(2) .img-slide").attr("src", "img/slide2.jpg");
-            $(".section:nth-child(3) .img-slide").attr("src", "img/slide3.jpg");
-            // $(".section:nth-child(2) .img-slide").attr("src", "img/slide2.jpg");
-            // $(".section:nth-child(3) .img-slide").attr("src", "img/slide3.jpg");
-            // $(".section:nth-child(4) .img-slide").attr("src", "img/slide4.jpg");
-            // $(".section:nth-child(5) .img-slide").attr("src", "img/slide5.jpg");
+            $(".section-1 .img-slide").attr("src", "img/slide-alfonse.jpg");
+            $(".section-2 .img-slide").attr("src", "img/slide1.jpg");
+            $(".section-3 .img-slide").attr("src", "img/slide2.jpg");
+            $(".section-4 .img-slide").attr("src", "img/slide3.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide2.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide3.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide4.jpg");
+            // $(".section-1 .img-slide").attr("src", "img/slide5.jpg");
             // $(".section:last-child .img-slide").attr("src", "img/slide5.jpg");
         }
 
